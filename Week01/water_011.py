@@ -2,14 +2,18 @@
 
 import sys
 
-s = sys.stdin.readlines()
+def fill_buckets(water, buckets):
+    filled_buckets = 0
+    for bucket in buckets:
+        if water >= bucket:
+            water -= bucket
+            filled_buckets += 1
+        else:
+            break
+    return filled_buckets
 
-value = int(s[0].strip())
-remaining = 0
-buckets = "".join(s[1:]).strip()
+water = int(input().strip())
+buckets = list(map(int, input().strip().split()))
 
-for bucket in buckets:
-    if int(bucket) // value > 0:
-        remaining = int(bucket) % value
-    else:
-        print(remaining)
+filled_buckets = fill_buckets(water, buckets)
+print(filled_buckets)
