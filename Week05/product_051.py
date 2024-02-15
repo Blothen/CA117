@@ -2,16 +2,12 @@
 
 import sys
 
-def recursion(numss):
-    num = str(numss)
+def recursion(num):
+    numstr = str(num)
     n = int(num)
     if n <= 9:
         return n
-    number = ""
-    for item in num:
-        if item != "0":
-            number = number + item
-    nums = [int(c) for c in number]
+    nums = [int(c) for c in numstr if c != "0"]
     product = 1
     for item in nums:
         product *= item
