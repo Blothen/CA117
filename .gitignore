@@ -1,4 +1,9 @@
 *.txt
+*.pyc
 Week05/celsuis2fahrenheit.py
 Week05/multiple.py
 Week06/test.py
+Week08/element_caller.py
+Week08/bank_runner.py
+Week08/student_runner.py
+Week08/point_runner.py
